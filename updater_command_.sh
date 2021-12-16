@@ -10,7 +10,7 @@ conda activate metis
 #Set directory.
 cd ~
 cd Metis
-cd Module\ 7\ -\ NY\ Real\ Estate\ Regression
+cd Metis-7---Engineering
 
 #Scrape new data for the past day.
 python update_data.py
@@ -28,5 +28,7 @@ git remote set-url origin https://MK38993:ghb_PlaceholderForMyAPIKeyItsSecretSor
 git pull
 git add RandomForestRegressor
 git commit -a -m "Updated RFR"
+git add StandardScaler
+git commit -a -m "Updated StandardScaler"
 git push origin main
 

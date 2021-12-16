@@ -178,11 +178,14 @@ def predictpage() -> str:
 	arg_frame[arg_frame['property_type'].iloc[0].replace('”','')]=[1]
 	arg_frame[arg_frame['borough'].iloc[0].replace('”','')]=[1]
 	
+	#We don't need these columns now that we have dummies
 	arg_frame.drop(['description','property_type','borough'],axis=1,inplace=True)
 	arg_frame.fillna('0',inplace=True)
 	
+	#Run the model.
 	prediction=RFR.predict(arg_frame)[0]
 	
+	#Head to the prediction page.
 	return(flask.render_template('predictpage.html', x_input=request.args, prediction=int(prediction*100)/100))
 
 if __name__ == '__main__':

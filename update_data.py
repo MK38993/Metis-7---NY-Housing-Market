@@ -24,7 +24,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 
 import os
-os.chdir('/Users/matthewkwee/Metis/Module 7 - NY Real Estate Regression')
+os.chdir('/Users/matthewkwee/Metis/Metis-7---Engineering')
 
 
 def main():
@@ -434,17 +434,6 @@ def main():
 
 	stop_words = stopwords.words('english')
 
-	cases_dict={}
-
-	def special_cases(tokens):
-		for i in range(len(tokens)):
-			if tokens[i] in cases_dict:
-				tokens[i]=cases_dict[tokens[i]]
-	#     if tokens in cases_dict:
-	#         tokens=cases_dict[tokens]
-		return(tokens)
-
-
 	def remove_noise(tweet_tokens, stop_words = stop_words):
 		cleaned_tokens = []
 
@@ -601,6 +590,7 @@ def main():
 	with open('listing_frame_final','wb') as f:
 		pickle.dump(listing_frame_v8,f)
 	f.close()
+	
 
 
 	print('Done!')

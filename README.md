@@ -42,6 +42,8 @@ The features the app requires are:
 ## Models
 The Random Forest model I constructed consists of 256 decision trees. Its r2 score was 0.84 on all data - when I conducted an 80-20 train-test split, its r2 was 0.88 on training data and 0.65 in test data. While this isn't a very good result, I expect that the problem of overfitting will diminish as the model's dataset grows over time.
 
+The mean price of the dataset is about $1,358,000, and the median price is $810,000.
+The mean absolute error of the model is about $164,000, so there is definitely room for improvement. I believe that as the pipeline gathers data, the model's accuracy will increase.
 
 ## Tools
 Selenium for data scraping

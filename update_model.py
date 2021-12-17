@@ -31,7 +31,7 @@ os.chdir('/Users/matthewkwee/Metis/Metis-7---Engineering')
 
 # Run Random Forest Regression
 	
-with open('listing_frame_final','rb') as f:
+with open('listing_frame_final.bin','rb') as f:
 	listing_frame_v8=pickle.load(f)
 f.close()
 

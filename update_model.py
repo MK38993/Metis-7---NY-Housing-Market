@@ -51,12 +51,18 @@ predicted_prices = model.predict(X)
 trf = r2_score(y , predicted_prices)
 print('Random forest r2 = ', trf)
 
-with open('RandomForestRegressor','wb') as f:
+with open('RandomForestRegressor.bin','wb') as f:
 	pickle.dump(model,f)
 f.close()
 
 os.chdir('/Users/matthewkwee/Metis/engi_res')
 
-with open('RandomForestRegressor','wb') as f:
+with open('RandomForestRegressor.bin','wb') as f:
+	pickle.dump(model,f)
+f.close()
+
+os.chdir('/Users/matthewkwee/nyc_housing')
+
+with open('RandomForestRegressor.bin','wb') as f:
 	pickle.dump(model,f)
 f.close()

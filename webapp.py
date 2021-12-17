@@ -97,6 +97,7 @@ def landingpage() -> str:
 @app.route('/predict')  # the site to route to, index/main in this case
 def predictpage() -> str:
 	arg_dict=request.args
+	back_to_landing=False
 	try:
 	
 		if int(arg_dict['beds']) not in range(51):
@@ -116,7 +117,7 @@ def predictpage() -> str:
 		
 	if back_to_landing:
 		return(flask.render_template('landingpage.html')+"<p1>Please enter valid values.</p1>")
-	
+	print('FLAG 1')
 	
 	arg_frame=pd.DataFrame(arg_dict,index=['0'])
 
@@ -163,10 +164,9 @@ def predictpage() -> str:
 	for column in dummies:
 		arg_frame[column]=dummies[column]
 
-	
-	#curse you, "smart" quotes		
-	arg_frame[arg_frame['property_type'].iloc[0].replace('”','')]=[1]
-	arg_frame[arg_frame['borough'].iloc[0].replace('”','')]=[1]
+		
+	arg_frame[arg_frame['property_type'].iloc[0]]=[1]
+	arg_frame[arg_frame['borough'].iloc[0]]=[1]
 	
 	#We don't need these columns now that we have dummies
 	arg_frame.drop(['description','property_type','borough'],axis=1,inplace=True)

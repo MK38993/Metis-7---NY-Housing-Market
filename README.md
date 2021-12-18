@@ -44,18 +44,18 @@ The Random Forest model I constructed consists of 256 decision trees. Its r2 sco
 
 
 ## Tools
-Selenium for data scraping
-Pandas and NumPy for data storage and formatting
-Google Maps Geocoding API for filling in missing location data
-NLTK for tokenization of listing descriptions
-TextBlob for sentiment analysis of descriptions
-Gensim for topic modeling descriptions in order to perform soft clustering
-Scikit-Learn's Linear, Ridge, Lasso, Elastic Net, Decision Tree, and Random Forest regressors for modeling
-TensorFlow's Keras module for constructing a MLP Regressor
-MacOS Command Line scripts for automated data collection and model updates
-GitHub API for automatically pushing the Random Forest model to a backup repository
-Flask for creating web app
-Heroku for deploying Flask app
+- Selenium for data scraping
+- Pandas and NumPy for data storage and formatting
+- Google Maps Geocoding API for filling in missing location data
+- NLTK for tokenization of listing descriptions
+- TextBlob for sentiment analysis of descriptions
+- Gensim for topic modeling descriptions in order to perform soft clustering
+- Scikit-Learn's Linear, Ridge, Lasso, Elastic Net, Decision Tree, and Random Forest regressors for modeling
+- TensorFlow's Keras module for constructing a MLP Regressor
+- MacOS Command Line scripts for automated data collection and model updates
+- GitHub API for automatically pushing the Random Forest model to a backup repository
+- Flask for creating web app
+- Heroku for deploying Flask app
 
 
 ## Communication

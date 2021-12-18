@@ -46,18 +46,18 @@ The mean price of the dataset is about $1,358,000, and the median price is $810,
 The mean absolute error of the model is about $164,000, so there is definitely room for improvement. I believe that as the pipeline gathers data, the model's accuracy will increase.
 
 ## Tools
-Selenium for data scraping
-Pandas and NumPy for data storage and formatting
-Google Maps Geocoding API for filling in missing location data
-NLTK for tokenization of listing descriptions
-TextBlob for sentiment analysis of descriptions
-Gensim for topic modeling descriptions in order to perform soft clustering
-Scikit-Learn's Linear, Ridge, Lasso, Elastic Net, Decision Tree, and Random Forest regressors for modeling
-TensorFlow's Keras module for constructing a MLP Regressor
-MacOS Command Line scripts for automated data collection and model updates
-GitHub API for automatically pushing the Random Forest model to a backup repository
-Flask for creating web app
-Heroku for deploying Flask app
+- Selenium for data scraping
+- Pandas and NumPy for data storage and formatting
+- Google Maps Geocoding API for filling in missing location data
+- NLTK for tokenization of listing descriptions
+- TextBlob for sentiment analysis of descriptions
+- Gensim for topic modeling descriptions in order to perform soft clustering
+- Scikit-Learn's Linear, Ridge, Lasso, Elastic Net, Decision Tree, and Random Forest regressors for modeling
+- TensorFlow's Keras module for constructing a MLP Regressor
+- MacOS Command Line scripts for automated data collection and model updates
+- GitHub API for automatically pushing the Random Forest model to a backup repository
+- Flask for creating web app
+- Heroku for deploying Flask app
 
 
 ## Communication

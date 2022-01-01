@@ -20,6 +20,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 
+from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
 import os
@@ -42,7 +43,7 @@ X = listing_frame_v8.drop(['price'], axis=1)
 y = listing_frame_v8['price']
 
 print('Fitting model...')
-model = RandomForestRegressor(n_estimators=256,max_features=1.0, random_state=420)
+model = RandomForestRegressor(n_estimators=192,max_features=1.0, random_state=420)
 model.fit(X,y)
 print('Scoring model...')
 
